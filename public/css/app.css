@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);
+
 @charset "UTF-8";
 /*!
  * Bootstrap v4.6.0 (https://getbootstrap.com/)
@@ -6,6 +7,55 @@
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+.footer {
+  background: #f8f9fa;
+  padding: 2rem 0;
+  margin-top: 3rem;
+}
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+.footer-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+.footer-col {
+  flex: 1 1 30%;
+  margin-bottom: 1rem;
+  min-width: 220px;
+}
+.footer-list {
+  list-style: none;
+  padding-left: 0;
+}
+.footer-social {
+  display: inline-block;
+  margin-right: 0.75rem;
+  color: #343a40;
+  text-decoration: none;
+}
+.footer-social:hover {
+  color: #3490dc;
+}
+.footer-copyright {
+  text-align: center;
+  margin-top: 1.5rem;
+  color: #6c757d;
+}
+@media (max-width: 768px) {
+  .footer-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .footer-col {
+    min-width: unset;
+  }
+}
+
 :root {
     --blue: #3490dc;
     --indigo: #6574cd;
@@ -722,7 +772,7 @@ pre code {
     order: 3;
 }
 
-.order-4 {
+.order-4    {
     order: 4;
 }
 

@@ -1,30 +1,30 @@
 
 
-<footer class="footer bg-light py-4 mt-5">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4 mb-3">
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-row">
+      <div class="footer-col">
         <h5>Over ons</h5>
         <p>Wij zijn een innovatief bedrijf dat zich richt op het leveren van hoogwaardige handleidingen en support. Ons team staat altijd klaar om te helpen!</p>
       </div>
-      <div class="col-md-4 mb-3">
+      <div class="footer-col">
         <h5>Contact</h5>
-        <ul class="list-unstyled">
+        <ul class="footer-list">
           <li>Email: info@dummybedrijf.nl</li>
           <li>Telefoon: 0123-456789</li>
           <li>Adres: Dummystraat 1, 1234 AB Dummycity</li>
         </ul>
       </div>
-      <div class="col-md-4 mb-3">
+      <div class="footer-col">
         <h5>Volg ons</h5>
-        <a href="#" class="me-2"><i class="fab fa-facebook"></i> Facebook</a>
-        <a href="#" class="me-2"><i class="fab fa-twitter"></i> Twitter</a>
-        <a href="#" class="me-2"><i class="fab fa-instagram"></i> Instagram</a>
+        <a href="#" class="footer-social"><class="fab fa-facebook"></class> Facebook</a>
+        <a href="#" class="footer-social"><class="fab fa-twitter"></class> Twitter</a>
+        <a href="#" class="footer-social"><class="fab fa-instagram"></class> Instagram</a>
       </div>
     </div>
-    <div class="row">
-      <div class="col text-center mt-3">
-        <span class="text-muted">© {{ __('misc.copyright') }}</span>
+    <div class="footer-row">
+      <div class="footer-copyright">
+        <span>© {{ __('misc.copyright') }}</span>
       </div>
     </div>
   </div>
