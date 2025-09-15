@@ -24,7 +24,7 @@
     </div>
     <div class="row">
       <div class="col text-center mt-3">
-        <span class="text-muted">© {{ __('misc.copyright') }}</span>
+        <span class="text-muted">© <?php echo e(__('misc.copyright')); ?></span>
       </div>
     </div>
   </div>
@@ -53,3 +53,4 @@
  }
 
 </script>
+<?php /**PATH C:\laragon\www\laravel101\pra-c2\resources\views/components/footer.blade.php ENDPATH**/ ?>
