@@ -23,15 +23,14 @@
 
 
         <?php $__currentLoopData = $manuals; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $manual): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-
-            <?php if($manual->locally_available): ?>
-                <a href="/<?php echo e($brand->id); ?>/<?php echo e($brand->getNameUrlEncodedAttribute()); ?>/<?php echo e($manual->id); ?>/" alt="<?php echo e($manual->name); ?>" title="<?php echo e($manual->name); ?>"><?php echo e($manual->name); ?></a>
-                (<?php echo e($manual->filesize_human_readable); ?>)
-            <?php else: ?>
-                <a href="<?php echo e($manual->url); ?>" target="new" alt="<?php echo e($manual->name); ?>" title="<?php echo e($manual->name); ?>"><?php echo e($manual->name); ?></a>
-            <?php endif; ?>
-
-            <br />
+            <div class="manual-item">
+                <?php if($manual->locally_available): ?>
+                    <a href="/<?php echo e($brand->id); ?>/<?php echo e($brand->getNameUrlEncodedAttribute()); ?>/<?php echo e($manual->id); ?>/" alt="<?php echo e($manual->name); ?>" title="<?php echo e($manual->name); ?>" class="manual-btn"><?php echo e($manual->name); ?></a>
+                    <span class="manual-size">(<?php echo e($manual->filesize_human_readable); ?>)</span>
+                <?php else: ?>
+                    <a href="<?php echo e($manual->url); ?>" target="_blank" alt="<?php echo e($manual->name); ?>" title="<?php echo e($manual->name); ?>" class="manual-btn"><?php echo e($manual->name); ?></a>
+                <?php endif; ?>
+            </div>
         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
  <?php echo $__env->renderComponent(); ?>
