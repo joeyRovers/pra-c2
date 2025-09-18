@@ -7,7 +7,23 @@
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
- .manual-btn {
+
+/* Brands container for homepage */
+.brands-container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+
+.manual-btn {
     display: inline-block;
     padding: 0.75rem 1.5rem;
     font-size: 1rem;

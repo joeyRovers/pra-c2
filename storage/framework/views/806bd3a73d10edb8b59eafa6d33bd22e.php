@@ -8,6 +8,7 @@
 <?php endif; ?>
 <?php $component->withAttributes([]); ?>
 
+
      <?php $__env->slot('introduction_text', null, []); ?> 
         <p><img src="img/afbl_logo.png" align="right" width="100" height="100"><?php echo e(__('introduction_texts.homepage_line_1')); ?></p>
         <p><?php echo e(__('introduction_texts.homepage_line_2')); ?></p>
@@ -28,14 +29,13 @@
     $chunk_size = ceil($size / $columns);
     ?>
 
-    <div class="container">
-        <!-- Example row of columns -->
+    <div class="brands-container text-center">
         <div class="row">
 
             <?php $__currentLoopData = $brands->chunk($chunk_size); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $chunk): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                 <div class="col-md-4">
 
-                    <ul>
+                    <ul class="list-unstyled">
                         <?php $__currentLoopData = $chunk; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $brand): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 
                             <?php
@@ -43,13 +43,13 @@
 
                             if (!isset($header_first_letter) || (isset($header_first_letter) && $current_first_letter != $header_first_letter)) {
                                 echo '</ul>
-						<h2>' . $current_first_letter . '</h2>
-						<ul>';
+						<h2 class="text-center">' . $current_first_letter . '</h2>
+						<ul class="list-unstyled">';
                             }
                             $header_first_letter = $current_first_letter
                             ?>
 
-                            <li>
+                            <li class="text-center">
                                 <a href="/<?php echo e($brand->id); ?>/<?php echo e($brand->getNameUrlEncodedAttribute()); ?>/"><?php echo e($brand->name); ?></a>
                             </li>
                         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
@@ -62,7 +62,6 @@
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
         </div>
-
     </div>
  <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
