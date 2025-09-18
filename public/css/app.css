@@ -7,6 +7,27 @@
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+ .manual-btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: #3490dc;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background 0.2s;
+}
+.manual-btn:hover,
+.manual-btn:focus {
+    background-color: #2176bd;
+    outline: none;
+}
+.manual-btn:active {
+    background-color: #1d68a7;
+}
 .footer {
   background: #f8f9fa;
   padding: 2rem 0;
