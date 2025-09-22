@@ -15,10 +15,10 @@
     @if ($manual->locally_available)
         <iframe src="{{ $manual->url }}" width="780" height="600" frameborder="0" marginheight="0" marginwidth="0">
         Iframes are not supported<br />
-        <button class="manual-btn" onclick="window.open('{{ $manual->url }}', '_blank')">Download de handleiding</button>
+        <a href="{{ $manual->url }}" target="new" alt="Download your manual here" title="Download your manual here">Click here to download the manual</a>
         </iframe>
     @else
-        <button class="manual-btn" onclick="window.open('{{ $manual->url }}', '_blank')">Download de handleiding</button>
+        <a href="{{ $manual->url }}" target="new" alt="Download your manual here" title="Download your manual here">Click here to download the manual</a>
     @endif
 
 </x-layouts.app>

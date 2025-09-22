@@ -1,6 +1,5 @@
 <x-layouts.app>
 
-
     <x-slot:introduction_text>
         <p><img src="img/afbl_logo.png" align="right" width="100" height="100">{{ __('introduction_texts.homepage_line_1') }}</p>
         <p>{{ __('introduction_texts.homepage_line_2') }}</p>
@@ -20,13 +19,14 @@
     $chunk_size = ceil($size / $columns);
     ?>
 
-    <div class="brands-container text-center">
+    <div class="container">
+        <!-- Example row of columns -->
         <div class="row">
 
             @foreach($brands->chunk($chunk_size) as $chunk)
                 <div class="col-md-4">
 
-                    <ul class="list-unstyled">
+                    <ul>
                         @foreach($chunk as $brand)
 
                             <?php
@@ -34,13 +34,13 @@
 
                             if (!isset($header_first_letter) || (isset($header_first_letter) && $current_first_letter != $header_first_letter)) {
                                 echo '</ul>
-						<h2 class="text-center">' . $current_first_letter . '</h2>
-						<ul class="list-unstyled">';
+						<h2>' . $current_first_letter . '</h2>
+						<ul>';
                             }
                             $header_first_letter = $current_first_letter
                             ?>
 
-                            <li class="text-center">
+                            <li>
                                 <a href="/{{ $brand->id }}/{{ $brand->getNameUrlEncodedAttribute() }}/">{{ $brand->name }}</a>
                             </li>
                         @endforeach
@@ -53,5 +53,6 @@
             @endforeach
 
         </div>
+
     </div>
 </x-layouts.app>

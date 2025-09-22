@@ -1,5 +1,4 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);
-
 @charset "UTF-8";
 /*!
  * Bootstrap v4.6.0 (https://getbootstrap.com/)
@@ -7,116 +6,6 @@
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
-
-/* Brands container for homepage */
-.brands-container {
-  width: 100%;
-  margin: 0 auto;
-}
-
-.text-center {
-  text-align: center !important;
-}
-
-.list-unstyled {
-  padding-left: 0;
-  list-style: none;
-}
-
-.manual-btn {
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-    font-weight: 600;
-    color: #fff !important;
-    text-decoration: none !important;
-    background-color: #3490dc;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin: 0.5rem 0;
-    transition: all 0.2s ease;
-    text-align: center;
-    min-width: 180px;
-}
-.manual-btn:hover,
-.manual-btn:focus {
-    background-color: #2176bd;
-    color: #fff !important;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transform: translateY(-2px);
-    text-decoration: none ;
-}
-.manual-btn:active {
-    background-color: #1d68a7;
-    transform: translateY(0);
-}
-
-.manual-item {
-    margin: 1rem 0;
-    padding: 0.5rem;
-    border-bottom: 1px solid #eee;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-}
-
-.manual-size {
-    display: inline-block;
-    margin-left: 1rem;
-    color: #6c757d;
-    font-size: 0.9rem;
-}
-
-.footer {
-  background: #f8f9fa;
-  padding: 2rem 0;
-  margin-top: 3rem;
-}
-.footer-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-.footer-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: space-between;
-}
-.footer-col {
-  flex: 1 1 30%;
-  margin-bottom: 1rem;
-  min-width: 220px;
-}
-.footer-list {
-  list-style: none;
-  padding-left: 0;
-}
-.footer-social {
-  display: inline-block;
-  margin-right: 0.75rem;
-  color: #343a40;
-  text-decoration: none;
-}
-.footer-social:hover {
-  color: #3490dc;
-}
-.footer-copyright {
-  text-align: center;
-  margin-top: 1.5rem;
-  color: #6c757d;
-}
-@media (max-width: 768px) {
-  .footer-row {
-    flex-direction: column;
-    align-items: stretch;
-  }
-  .footer-col {
-    min-width: unset;
-  }
-}
-
 :root {
     --blue: #3490dc;
     --indigo: #6574cd;
@@ -833,7 +722,7 @@ pre code {
     order: 3;
 }
 
-.order-4    {
+.order-4 {
     order: 4;
 }
 
