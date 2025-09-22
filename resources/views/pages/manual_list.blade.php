@@ -14,14 +14,23 @@
     <p>{{ __('introduction_texts.type_list', ['brand'=>$brand->name]) }}</p>
 
 
+	@if(isset($topManuals) && count($topManuals) > 0)
+		<h2 class="text-center">Populaire handleidingen</h2>
+		<ul class="list-unstyled">
+		@foreach($topManuals as $manual)
+			<li>
+				<a href="/{{ $brand->id }}/{{ $brand->getNameUrlEncodedAttribute() }}/{{ $manual->id }}/">{{ $manual->name }}</a>
+				<small>({{ $manual->views }} views)</small>
+			</li>
+		@endforeach
+		</ul>
+	@endif
+
+
         @foreach ($manuals as $manual)
 
-            @if ($manual->locally_available)
-                <a href="/{{ $brand->id }}/{{ $brand->getNameUrlEncodedAttribute() }}/{{ $manual->id }}/" alt="{{ $manual->name }}" title="{{ $manual->name }}">{{ $manual->name }}</a>
-                ({{$manual->filesize_human_readable}})
-            @else
-                <a href="{{ $manual->url }}" target="new" alt="{{ $manual->name }}" title="{{ $manual->name }}">{{ $manual->name }}</a>
-            @endif
+            <a href="/{{ $brand->id }}/{{ $brand->getNameUrlEncodedAttribute() }}/{{ $manual->id }}/" alt="{{ $manual->name }}" title="{{ $manual->name }}">{{ $manual->name }}</a>
+            ({{$manual->filesize_human_readable}})
 
             <br />
         @endforeach

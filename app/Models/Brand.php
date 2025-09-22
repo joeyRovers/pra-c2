@@ -9,6 +9,11 @@ class Brand extends Model
 {
     use HasFactory;
 
+    public function manuals()
+    {
+        return $this->hasMany(Manual::class);
+    }
+
     public function getNameUrlEncodedAttribute()
     {
         $name_url_encoded = str_replace('/','',$this->name);

@@ -9,6 +9,11 @@ class Manual extends Model
 {
     use HasFactory;
 
+    public function brand()
+    {
+        return $this->belongsTo(Brand::class);
+    }
+
     // Returns the filesize in a human readable format
     public function getFilesizeHumanReadableAttribute(){
 

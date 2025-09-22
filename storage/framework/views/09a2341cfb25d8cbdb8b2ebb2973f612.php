@@ -1,11 +1,37 @@
 
-<footer>
-	© <?php echo e(__('misc.copyright')); ?>
 
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-row">
+      <div class="footer-col">
+        <h5>Over ons</h5>
+        <p>Wij zijn een innovatief bedrijf dat zich richt op het leveren van hoogwaardige handleidingen en support. Ons team staat altijd klaar om te helpen!</p>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <ul class="footer-list">
+          <li>Email: info@dummybedrijf.nl</li>
+          <li>Telefoon: 0123-456789</li>
+          <li>Adres: Dummystraat 1, 1234 AB Dummycity</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Volg ons</h5>
+        <a href="#" class="footer-social"><class="fab fa-facebook"></class> Facebook</a>
+        <a href="#" class="footer-social"><class="fab fa-twitter"></class> Twitter</a>
+        <a href="#" class="footer-social"><class="fab fa-instagram"></class> Instagram</a>
+      </div>
+    </div>
+    <div class="footer-row">
+      <div class="footer-copyright">
+        <span>© <?php echo e(__('misc.copyright')); ?></span>
+      </div>
+    </div>
+  </div>
 </footer>
 
 
-<!-- analytics code -->              
+<!-- analytics code -->
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
@@ -20,11 +46,11 @@
 </script>
 <!-- Einde analytics code -->
 
-<script language="Javascript" type="text/javascript"> 
- 
- if (top.location!= self.location) { 
+<script language="Javascript" type="text/javascript">
+
+ if (top.location!= self.location) {
   top.location = self.location.href
- } 
- 
+ }
+
 </script>
 <?php /**PATH C:\laragon\www\4s_manuals\resources\views/components/footer.blade.php ENDPATH**/ ?>
