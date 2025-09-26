@@ -8,7 +8,6 @@
 <?php endif; ?>
 <?php $component->withAttributes([]); ?>
 
-
      <?php $__env->slot('introduction_text', null, []); ?> 
         <p><img src="img/afbl_logo.png" align="right" width="100" height="100"><?php echo e(__('introduction_texts.homepage_line_1')); ?></p>
         <p><?php echo e(__('introduction_texts.homepage_line_2')); ?></p>
@@ -21,6 +20,19 @@
 
          <?php $__env->endSlot(); ?>
     </h1>
+
+
+    <?php if(isset($topManuals) && count($topManuals) > 0): ?>
+    <h2 class="text-center">Popular manuals</h2>
+    <ul class="list-unstyled text-center">
+        <?php $__currentLoopData = $topManuals; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $manual): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+            <li>
+                <a href="/<?php echo e($manual->brand->id); ?>/<?php echo e($manual->brand->getNameUrlEncodedAttribute()); ?>/<?php echo e($manual->id); ?>/"><?php echo e($manual->brand->name); ?>: <?php echo e($manual->name); ?></a>
+                <small>(<?php echo e($manual->views); ?> views)</small>
+            </li>
+        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+    </ul>
+    <?php endif; ?>
 
 
     <?php
@@ -48,7 +60,6 @@
                             }
                             $header_first_letter = $current_first_letter
                             ?>
-
                             <li class="text-center">
                                 <a href="/<?php echo e($brand->id); ?>/<?php echo e($brand->getNameUrlEncodedAttribute()); ?>/"><?php echo e($brand->name); ?></a>
                             </li>
