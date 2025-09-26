@@ -34,15 +34,22 @@ use App\Http\Controllers\ProductCategoryController;
 use App\Http\Controllers\SitemapController;
 use App\Http\Controllers\LocaleController;
 
-// Homepage
 Route::get('/', function () {
+    $name = "terence, xander of joey";
     $brands = Brand::all()->sortBy('name');
     $topManuals = \App\Models\Manual::orderByDesc('views')->limit(10)->get();
+
     return view('pages.homepage', [
+        'name' => $name,           // Add this line
         'brands' => $brands,
         'topManuals' => $topManuals,
     ]);
 })->name('home');
+
+use App\Http\Controllers\ContactController;
+
+Route::get('/contact', [ContactController::class, 'show'])->name('contact');
+Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
 
 Route::get('/manual/{language}/{brand_slug}/', [RedirectController::class, 'brand']);
 Route::get('/manual/{language}/{brand_slug}/brand.html', [RedirectController::class, 'brand']);

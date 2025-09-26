@@ -9,11 +9,14 @@
  */
 
 /* Brands container for homepage */
+
 .brands-container {
   width: 100%;
   margin: 0 auto;
 }
-
+.brands-container a{
+    text-decoration: none;
+}
 .text-center {
   text-align: center !important;
 }
@@ -242,7 +245,7 @@ sup {
 }
 
 a {
-    color: #3490dc;
+    color: black;
     text-decoration: none;
     background-color: transparent;
 }
@@ -1161,6 +1164,7 @@ pre code {
     .col-md-4 {
         flex: 0 0 33.3333333333%;
         max-width: 33.3333333333%;
+        background-color: #e9ecef;
     }
 
     .col-md-5 {
@@ -4064,7 +4068,7 @@ input[type=button].btn-block {
     padding-top: 0.32rem;
     padding-bottom: 0.32rem;
     margin-right: 1rem;
-    font-size: 1.125rem;
+    font-size: 3rem;
     line-height: inherit;
     white-space: nowrap;
 }

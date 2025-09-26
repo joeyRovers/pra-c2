@@ -12,6 +12,11 @@
         </x-slot:title>
     </h1>
 
+    {{-- Alleen je naam tonen --}}
+    <div class="alert alert-info">
+        Welkom, {{ $name }}!
+    </div>
+
 
     @if(isset($topManuals) && count($topManuals) > 0)
     <h2 class="text-center">Popular manuals</h2>
