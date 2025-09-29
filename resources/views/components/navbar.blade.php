@@ -3,7 +3,13 @@
         <div class="navbar-header mr-auto">
             <a class="navbar-brand" href="/" title="{{ __('misc.home_alt') }}">{{ __('misc.homepage_title') }}</a>
         </div>
+
         <div id="navbar" class="form-inline">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact">{{ __('contact') }}</a>
+                </li>
+            </ul>
 
             <script>
                 (function () {
@@ -17,8 +23,6 @@
                 })();
             </script>
             <gcse:searchbox-only></gcse:searchbox-only>
-
-
         </div><!--/.navbar-collapse -->
     </div>
 </nav>

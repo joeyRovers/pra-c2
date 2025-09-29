@@ -308,6 +308,23 @@ th {
     text-align: inherit;
     text-align: -webkit-match-parent;
 }
+.btn-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* responsive grid */
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.btn-grid a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    background-color: #3490dc;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-align: center;
+}
+
 
 label {
     display: inline-block;
