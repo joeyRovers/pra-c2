@@ -19,19 +19,21 @@
 		<ul class="list-unstyled">
 		@foreach($topManuals as $manual)
 			<li>
+                <div class="btn">
 				<a href="/{{ $brand->id }}/{{ $brand->getNameUrlEncodedAttribute() }}/{{ $manual->id }}/">{{ $manual->name }}</a>
 				<small>({{ $manual->views }} views)</small>
-			</li>
+                </div>
+            </li>
 		@endforeach
 		</ul>
 	@endif
 
 
         @foreach ($manuals as $manual)
-
+            <div class="btn">
             <a href="/{{ $brand->id }}/{{ $brand->getNameUrlEncodedAttribute() }}/{{ $manual->id }}/" alt="{{ $manual->name }}" title="{{ $manual->name }}">{{ $manual->name }}</a>
             ({{$manual->filesize_human_readable}})
-
+            </div>
             <br />
         @endforeach
 
