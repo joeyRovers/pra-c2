@@ -31,7 +31,24 @@
     $size = count($brands);
     $columns = 3;
     $chunk_size = ceil($size / $columns);
+
+    // Build a map of available first letters for A–Z navigation
+    $lettersAvailable = [];
+    foreach ($brands as $b) {
+        $lettersAvailable[strtoupper(substr($b->name, 0, 1))] = true;
+    }
+    $alphabet = range('A', 'Z');
     ?>
+
+    <div class="text-center" style="margin-bottom: 16px;">
+        @foreach($alphabet as $letter)
+            @if(isset($lettersAvailable[$letter]))
+                <a href="#letter-{{ $letter }}" style="margin:0 4px; display:inline-block;">{{ $letter }}</a>
+            @else
+                <span class="text-muted" style="margin:0 4px; display:inline-block;">{{ $letter }}</span>
+            @endif
+        @endforeach
+    </div>
 
     <div class="brands-container text-center">
         <div class="row">
@@ -47,7 +64,7 @@
 
                             if (!isset($header_first_letter) || (isset($header_first_letter) && $current_first_letter != $header_first_letter)) {
                                 echo '</ul>
-						<h2 class="text-center">' . $current_first_letter . '</h2>
+						<h2 id="letter-' . $current_first_letter . '" class="text-center">' . $current_first_letter . '</h2>
 						<ul class="list-unstyled">';
                             }
                             $header_first_letter = $current_first_letter
