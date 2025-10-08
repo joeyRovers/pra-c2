@@ -31,17 +31,31 @@
     @endif
 
 
+    <?php
+    $size = count($brands);
+    $columns = 3;
+    $chunk_size = ceil($size / $columns);
 
-    <div class="brands-container">
-        @foreach($brandsByCategory as $categoryName => $brands)
-            <div class="category-dropdown">
-                <div class="category-header" onclick="toggleCategory('{{ Str::slug($categoryName) }}')">
-                    <h2 class="category-title">
-                        {{ $categoryName }}
-                        <span class="brand-count">({{ count($brands) }} brands)</span>
-                        <i class="dropdown-arrow" id="arrow-{{ Str::slug($categoryName) }}">▼</i>
-                    </h2>
-                </div>
+    // Build a map of available first letters for A–Z navigation
+    $lettersAvailable = [];
+    foreach ($brands as $b) {
+        $lettersAvailable[strtoupper(substr($b->name, 0, 1))] = true;
+    }
+    $alphabet = range('A', 'Z');
+    ?>
+
+    <div class="text-center" style="margin-bottom: 16px;">
+        @foreach($alphabet as $letter)
+            @if(isset($lettersAvailable[$letter]))
+                <a href="#letter-{{ $letter }}" style="margin:0 4px; display:inline-block;">{{ $letter }}</a>
+            @else
+                <span class="text-muted" style="margin:0 4px; display:inline-block;">{{ $letter }}</span>
+            @endif
+        @endforeach
+    </div>
+
+    <div class="brands-container text-center">
+        <div class="row">
 
                 <div class="category-content" id="content-{{ Str::slug($categoryName) }}">
                     <?php
@@ -74,12 +88,13 @@
             const arrow = document.getElementById('arrow-' + categorySlug);
             const header = arrow.closest('.category-header');
 
-            if (content.style.display === 'none' || content.style.display === '') {
-                // Open this category
-                content.style.display = 'block';
-                arrow.innerHTML = '▲';
-                arrow.classList.add('expanded');
-                header.classList.add('active');
+                            if (!isset($header_first_letter) || (isset($header_first_letter) && $current_first_letter != $header_first_letter)) {
+                                echo '</ul>
+						<h2 id="letter-' . $current_first_letter . '" class="text-center">' . $current_first_letter . '</h2>
+						<ul class="list-unstyled">';
+                            }
+                            $header_first_letter = $current_first_letter
+                            ?>
 
                 // Smooth scroll to category if not in view
                 setTimeout(() => {
