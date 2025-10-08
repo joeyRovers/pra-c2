@@ -8,11 +8,11 @@
 <?php endif; ?>
 <?php $component->withAttributes([]); ?>
 
-     <?php $__env->slot('head', null, []); ?> 
+     <?php $__env->slot('head', null, []); ?>
         <meta name="robots" content="index, nofollow">
      <?php $__env->endSlot(); ?>
 
-     <?php $__env->slot('breadcrumb', null, []); ?> 
+     <?php $__env->slot('breadcrumb', null, []); ?>
         <li><a href="/<?php echo e($brand->id); ?>/<?php echo e($brand->getNameUrlEncodedAttribute()); ?>/" alt="Manuals for '<?php echo e($brand->name); ?>'" title="Manuals for '<?php echo e($brand->name); ?>'"><?php echo e($brand->name); ?></a></li>
      <?php $__env->endSlot(); ?>
 

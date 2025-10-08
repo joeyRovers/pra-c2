@@ -15,7 +15,6 @@ class ManualController extends Controller
 
         // increment view counter
         $manual->increment('views');
-
         return view('pages/manual_view', [
             "manual" => $manual,
             "brand" => $brand,

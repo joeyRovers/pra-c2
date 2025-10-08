@@ -7,6 +7,15 @@
 
 <x-navbar/>
 
+<div class="text-end p-3">
+    <select onchange="window.location.href=this.value" class="form-select d-inline w-auto">
+        <option value="{{ url('/language/en') }}" @selected(app()->getLocale() === 'en')>English</option>
+        <option value="{{ url('/language/nl') }}" @selected(app()->getLocale() === 'nl')>Nederlands</option>
+    </select>
+</div>
+
+
+
 <div class="container">
     <div class="row justify-content-center">
 

@@ -1,6 +1,5 @@
 <x-layouts.app>
 
-
     <x-slot:introduction_text>
         <p><img src="img/afbl_logo.png" align="right" width="100" height="100">{{ __('introduction_texts.homepage_line_1') }}</p>
         <p>{{ __('introduction_texts.homepage_line_2') }}</p>
@@ -13,9 +12,14 @@
         </x-slot:title>
     </h1>
 
+    {{-- Alleen je naam tonen --}}
+    <div class="alert alert-info">
+        Welkom, {{ $name }}!
+    </div>
+
 
     @if(isset($topManuals) && count($topManuals) > 0)
-    <h2 class="text-center">Popular manuals</h2>
+    <h2 class="text-center">Populair manuals</h2>
     <ul class="list-unstyled text-center">
         @foreach($topManuals as $manual)
             <li>
@@ -53,14 +57,36 @@
     <div class="brands-container text-center">
         <div class="row">
 
-            @foreach($brands->chunk($chunk_size) as $chunk)
-                <div class="col-md-4">
+                <div class="category-content" id="content-{{ Str::slug($categoryName) }}">
+                    <?php
+                    $size = count($brands);
+                    $columns = 3;
+                    $chunk_size = ceil($size / $columns);
+                    ?>
 
-                    <ul class="list-unstyled">
-                        @foreach($chunk as $brand)
+                    <div class="row">
+                        @foreach($brands->chunk($chunk_size) as $chunk)
+                            <div class="col-md-4">
+                                <ul class="list-unstyled">
+                                    @foreach($chunk as $brand)
+                                        <li class="text-center">
+                                            <a href="/{{ $brand->id }}/{{ $brand->getNameUrlEncodedAttribute() }}/">{{ $brand->name }}</a>
+                                        </li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endforeach
+                    </div>
+                </div>
+            </div>
+        @endforeach
+    </div>
 
-                            <?php
-                            $current_first_letter = strtoupper(substr($brand->name, 0, 1));
+    <script>
+        function toggleCategory(categorySlug) {
+            const content = document.getElementById('content-' + categorySlug);
+            const arrow = document.getElementById('arrow-' + categorySlug);
+            const header = arrow.closest('.category-header');
 
                             if (!isset($header_first_letter) || (isset($header_first_letter) && $current_first_letter != $header_first_letter)) {
                                 echo '</ul>
@@ -70,18 +96,53 @@
                             $header_first_letter = $current_first_letter
                             ?>
 
-                            <li class="text-center">
-                                <a href="/{{ $brand->id }}/{{ $brand->getNameUrlEncodedAttribute() }}/">{{ $brand->name }}</a>
-                            </li>
-                        @endforeach
-                    </ul>
+                // Smooth scroll to category if not in view
+                setTimeout(() => {
+                    header.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }, 100);
+            } else {
+                // Close this category
+                content.style.display = 'none';
+                arrow.innerHTML = '▼';
+                arrow.classList.remove('expanded');
+                header.classList.remove('active');
+            }
+        }
 
-                </div>
-                <?php
-                unset($header_first_letter);
-                ?>
-            @endforeach
+        // Add expand/collapse all functionality
+        function toggleAllCategories(expand = true) {
+            const contents = document.querySelectorAll('.category-content');
+            const arrows = document.querySelectorAll('.dropdown-arrow');
+            const headers = document.querySelectorAll('.category-header');
 
-        </div>
-    </div>
+            contents.forEach((content, index) => {
+                if (expand) {
+                    content.style.display = 'block';
+                    arrows[index].innerHTML = '▲';
+                    arrows[index].classList.add('expanded');
+                    headers[index].classList.add('active');
+                } else {
+                    content.style.display = 'none';
+                    arrows[index].innerHTML = '▼';
+                    arrows[index].classList.remove('expanded');
+                    headers[index].classList.remove('active');
+                }
+            });
+        }
+
+        // Initialize all dropdowns as collapsed
+        document.addEventListener('DOMContentLoaded', function() {
+            const contents = document.querySelectorAll('.category-content');
+            contents.forEach(function(content) {
+                content.style.display = 'none';
+            });
+
+            // Add keyboard support
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    toggleAllCategories(false);
+                }
+            });
+        });
+    </script>
 </x-layouts.app>

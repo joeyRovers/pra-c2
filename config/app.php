@@ -109,6 +109,9 @@ return [
     |
     */
 
+    'available_locales' => ['en', 'nl'], // add your supported languages
+
+
     'faker_locale' => 'en_US',
 
     /*

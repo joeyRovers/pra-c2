@@ -8,15 +8,14 @@
 <?php endif; ?>
 <?php $component->withAttributes([]); ?>
 
-
-     <?php $__env->slot('introduction_text', null, []); ?> 
+     <?php $__env->slot('introduction_text', null, []); ?>
         <p><img src="img/afbl_logo.png" align="right" width="100" height="100"><?php echo e(__('introduction_texts.homepage_line_1')); ?></p>
         <p><?php echo e(__('introduction_texts.homepage_line_2')); ?></p>
         <p><?php echo e(__('introduction_texts.homepage_line_3')); ?></p>
      <?php $__env->endSlot(); ?>
 
     <h1>
-         <?php $__env->slot('title', null, []); ?> 
+         <?php $__env->slot('title', null, []); ?>
             <?php echo e(__('misc.all_brands')); ?>
 
          <?php $__env->endSlot(); ?>

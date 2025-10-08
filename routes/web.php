@@ -34,15 +34,31 @@ use App\Http\Controllers\ProductCategoryController;
 use App\Http\Controllers\SitemapController;
 use App\Http\Controllers\LocaleController;
 
-// Homepage
 Route::get('/', function () {
-    $brands = Brand::all()->sortBy('name');
+    $name = "terence, xander of joey";
+
+    // Group brands by category
+    $brandsByCategory = Brand::with('category')
+        ->get()
+        ->sortBy('name')
+        ->groupBy(function($brand) {
+            return $brand->category ? $brand->category->name : 'Uncategorized';
+        })
+        ->sortKeys();
+
     $topManuals = \App\Models\Manual::orderByDesc('views')->limit(10)->get();
+
     return view('pages.homepage', [
-        'brands' => $brands,
+        'name' => $name,
+        'brandsByCategory' => $brandsByCategory,
         'topManuals' => $topManuals,
     ]);
 })->name('home');
+
+use App\Http\Controllers\ContactController;
+
+Route::get('/contact', [ContactController::class, 'show'])->name('contact');
+Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
 
 Route::get('/manual/{language}/{brand_slug}/', [RedirectController::class, 'brand']);
 Route::get('/manual/{language}/{brand_slug}/brand.html', [RedirectController::class, 'brand']);

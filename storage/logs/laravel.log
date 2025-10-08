@@ -10,7 +10,7 @@
 #7 C:\\laragon\\www\\4s_manuals\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(199): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
 #8 C:\\laragon\\www\\4s_manuals\\artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #9 {main}
-"} 
+"}
 [2025-09-10 08:20:35] production.ERROR: The C:\laragon\www\4s_manuals\bootstrap\cache directory must be present and writable. {"exception":"[object] (Exception(code: 0): The C:\\laragon\\www\\4s_manuals\\bootstrap\\cache directory must be present and writable. at C:\\laragon\\www\\4s_manuals\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\PackageManifest.php:178)
 [stacktrace]
 #0 C:\\laragon\\www\\4s_manuals\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\PackageManifest.php(131): Illuminate\\Foundation\\PackageManifest->write(Array)
@@ -23,7 +23,7 @@
 #7 C:\\laragon\\www\\4s_manuals\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(199): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
 #8 Command line code(1): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #9 {main}
-"} 
+"}
 [2025-09-10 08:20:36] production.ERROR: Uncaught ReflectionException: Class "view" does not exist in C:\laragon\www\4s_manuals\vendor\laravel\framework\src\Illuminate\Container\Container.php:912
 Stack trace:
 #0 C:\laragon\www\4s_manuals\vendor\laravel\framework\src\Illuminate\Container\Container.php(912): ReflectionClass->__construct('view')
@@ -67,7 +67,7 @@ Stack trace:
   thrown at C:\\laragon\\www\\4s_manuals\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php:914)
 [stacktrace]
 #0 {main}
-"} 
+"}
 [2025-09-10 08:22:15] local.ERROR: SQLSTATE[HY000] [1049] Unknown database 'les1' (Connection: mysql, SQL: select * from information_schema.tables where table_schema = les1 and table_name = migrations and table_type = 'BASE TABLE') {"exception":"[object] (Illuminate\\Database\\QueryException(code: 1049): SQLSTATE[HY000] [1049] Unknown database 'les1' (Connection: mysql, SQL: select * from information_schema.tables where table_schema = les1 and table_name = migrations and table_type = 'BASE TABLE') at C:\\laragon\\www\\4s_manuals\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:801)
 [stacktrace]
 #0 C:\\laragon\\www\\4s_manuals\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(755): Illuminate\\Database\\Connection->runQueryCallback('select * from i...', Array, Object(Closure))
@@ -136,7 +136,7 @@ Stack trace:
 #33 C:\\laragon\\www\\4s_manuals\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(201): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #34 C:\\laragon\\www\\4s_manuals\\artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #35 {main}
-"} 
+"}
 [2025-09-10 08:24:02] local.ERROR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'manuals.sessions' doesn't exist (Connection: mysql, SQL: select * from `sessions` where `id` = RaeutCCiwlfipfcc7yDi2YwTRtcBrtqvs7ZKIJ5s limit 1) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42S02): SQLSTATE[42S02]: Base table or view not found: 1146 Table 'manuals.sessions' doesn't exist (Connection: mysql, SQL: select * from `sessions` where `id` = RaeutCCiwlfipfcc7yDi2YwTRtcBrtqvs7ZKIJ5s limit 1) at C:\\laragon\\www\\4s_manuals\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:801)
 [stacktrace]
 #0 C:\\laragon\\www\\4s_manuals\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(755): Illuminate\\Database\\Connection->runQueryCallback('select * from `...', Array, Object(Closure))
@@ -240,7 +240,7 @@ Stack trace:
 #47 C:\\laragon\\www\\4s_manuals\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
 #48 C:\\laragon\\www\\4s_manuals\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #49 {main}
-"} 
+"}
 [2025-09-10 08:24:31] local.ERROR: Please provide a valid cache path. {"exception":"[object] (InvalidArgumentException(code: 0): Please provide a valid cache path. at C:\\laragon\\www\\4s_manuals\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Compilers\\Compiler.php:66)
 [stacktrace]
 #0 C:\\laragon\\www\\4s_manuals\\vendor\\laravel\\framework\\src\\Illuminate\\View\\ViewServiceProvider.php(96): Illuminate\\View\\Compilers\\Compiler->__construct(Object(Illuminate\\Filesystem\\Filesystem), false, '', true, 'php')
@@ -304,7 +304,7 @@ Stack trace:
 #58 C:\\laragon\\www\\4s_manuals\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
 #59 C:\\laragon\\www\\4s_manuals\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #60 {main}
-"} 
+"}
 [2025-09-10 08:02:38] local.ERROR: SQLSTATE[HY000] [1049] Unknown database 'manuals' (Connection: mysql, SQL: select * from `sessions` where `id` = rrUnUhgKN8JDQBH77ZhdLGgmxGDZeq1LYYX9HLeL limit 1) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 1049): SQLSTATE[HY000] [1049] Unknown database 'manuals' (Connection: mysql, SQL: select * from `sessions` where `id` = rrUnUhgKN8JDQBH77ZhdLGgmxGDZeq1LYYX9HLeL limit 1) at C:\\Users\\Xande\\OneDrive\\Documents\\GitHub\\pra-c2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:801)
 [stacktrace]
 #0 C:\\Users\\Xande\\OneDrive\\Documents\\GitHub\\pra-c2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(755): Illuminate\\Database\\Connection->runQueryCallback('select * from `...', Array, Object(Closure))
@@ -416,7 +416,7 @@ Stack trace:
 #55 C:\\Users\\Xande\\OneDrive\\Documents\\GitHub\\pra-c2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
 #56 C:\\Users\\Xande\\OneDrive\\Documents\\GitHub\\pra-c2\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #57 {main}
-"} 
+"}
 [2025-09-10 08:16:54] local.ERROR: SQLSTATE[HY000] [1049] Unknown database 'manuals' (Connection: mysql, SQL: select * from `sessions` where `id` = 2ZWrfkJyrR1lBjaxiT3mkhBexKccVPNizahIHpgq limit 1) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 1049): SQLSTATE[HY000] [1049] Unknown database 'manuals' (Connection: mysql, SQL: select * from `sessions` where `id` = 2ZWrfkJyrR1lBjaxiT3mkhBexKccVPNizahIHpgq limit 1) at C:\\Users\\Xande\\OneDrive\\Documents\\GitHub\\pra-c2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:801)
 [stacktrace]
 #0 C:\\Users\\Xande\\OneDrive\\Documents\\GitHub\\pra-c2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(755): Illuminate\\Database\\Connection->runQueryCallback('select * from `...', Array, Object(Closure))
@@ -528,7 +528,7 @@ Stack trace:
 #55 C:\\Users\\Xande\\OneDrive\\Documents\\GitHub\\pra-c2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
 #56 C:\\Users\\Xande\\OneDrive\\Documents\\GitHub\\pra-c2\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #57 {main}
-"} 
+"}
 [2025-09-10 08:17:04] local.ERROR: SQLSTATE[HY000] [1049] Unknown database 'manuals' (Connection: mysql, SQL: select * from `sessions` where `id` = WKsHQyRzm4wcsLGKmX6TFqPlFra8ojrgrnMl0e6H limit 1) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 1049): SQLSTATE[HY000] [1049] Unknown database 'manuals' (Connection: mysql, SQL: select * from `sessions` where `id` = WKsHQyRzm4wcsLGKmX6TFqPlFra8ojrgrnMl0e6H limit 1) at C:\\Users\\Xande\\OneDrive\\Documents\\GitHub\\pra-c2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:801)
 [stacktrace]
 #0 C:\\Users\\Xande\\OneDrive\\Documents\\GitHub\\pra-c2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(755): Illuminate\\Database\\Connection->runQueryCallback('select * from `...', Array, Object(Closure))
@@ -640,7 +640,7 @@ Stack trace:
 #55 C:\\Users\\Xande\\OneDrive\\Documents\\GitHub\\pra-c2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
 #56 C:\\Users\\Xande\\OneDrive\\Documents\\GitHub\\pra-c2\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #57 {main}
-"} 
+"}
 [2025-09-10 08:18:26] local.ERROR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'manuals.sessions' doesn't exist (Connection: mysql, SQL: select * from `sessions` where `id` = KOd7640Yc63lUlLJDmu426Mzl3QTdhLtSpW01lSZ limit 1) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42S02): SQLSTATE[42S02]: Base table or view not found: 1146 Table 'manuals.sessions' doesn't exist (Connection: mysql, SQL: select * from `sessions` where `id` = KOd7640Yc63lUlLJDmu426Mzl3QTdhLtSpW01lSZ limit 1) at C:\\Users\\Xande\\OneDrive\\Documents\\GitHub\\pra-c2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:801)
 [stacktrace]
 #0 C:\\Users\\Xande\\OneDrive\\Documents\\GitHub\\pra-c2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(755): Illuminate\\Database\\Connection->runQueryCallback('select * from `...', Array, Object(Closure))
@@ -744,7 +744,7 @@ Stack trace:
 #47 C:\\Users\\Xande\\OneDrive\\Documents\\GitHub\\pra-c2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
 #48 C:\\Users\\Xande\\OneDrive\\Documents\\GitHub\\pra-c2\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #49 {main}
-"} 
+"}
 [2025-09-10 08:20:43] local.ERROR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'payload' in 'field list' (Connection: mysql, SQL: update `sessions` set `payload` = YTozOntzOjY6Il90b2tlbiI7czo0MDoiV3VYUWhVYnRrdXhCNTJrR1ZFZVZVODQ0ajFPaGhFZk5md3E4Mng0ciI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MzA6Imh0dHA6Ly9sb2NhbGhvc3QvcHJhLWMyL3B1YmxpYyI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=, `last_activity` = 1757492443, `user_id` = ?, `ip_address` = ::1, `user_agent` = Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36, `id` = LPCCoC5NKLv8uJfm9AL8aOk9v8p6qZVxOajs547Q where `id` = LPCCoC5NKLv8uJfm9AL8aOk9v8p6qZVxOajs547Q) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42S22): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'payload' in 'field list' (Connection: mysql, SQL: update `sessions` set `payload` = YTozOntzOjY6Il90b2tlbiI7czo0MDoiV3VYUWhVYnRrdXhCNTJrR1ZFZVZVODQ0ajFPaGhFZk5md3E4Mng0ciI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MzA6Imh0dHA6Ly9sb2NhbGhvc3QvcHJhLWMyL3B1YmxpYyI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=, `last_activity` = 1757492443, `user_id` = ?, `ip_address` = ::1, `user_agent` = Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36, `id` = LPCCoC5NKLv8uJfm9AL8aOk9v8p6qZVxOajs547Q where `id` = LPCCoC5NKLv8uJfm9AL8aOk9v8p6qZVxOajs547Q) at C:\\Users\\Xande\\OneDrive\\Documents\\GitHub\\pra-c2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:801)
 [stacktrace]
 #0 C:\\Users\\Xande\\OneDrive\\Documents\\GitHub\\pra-c2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(755): Illuminate\\Database\\Connection->runQueryCallback('update `session...', Array, Object(Closure))
@@ -836,7 +836,7 @@ Stack trace:
 #41 C:\\Users\\Xande\\OneDrive\\Documents\\GitHub\\pra-c2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
 #42 C:\\Users\\Xande\\OneDrive\\Documents\\GitHub\\pra-c2\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #43 {main}
-"} 
+"}
 [2025-09-10 08:21:42] local.ERROR: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'brands' already exists (Connection: mysql, SQL: create table `brands` (`id` bigint unsigned not null auto_increment primary key, `name` varchar(255) not null, `created_at` timestamp null, `updated_at` timestamp null) default character set utf8mb4 collate 'utf8mb4_unicode_ci') {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42S01): SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'brands' already exists (Connection: mysql, SQL: create table `brands` (`id` bigint unsigned not null auto_increment primary key, `name` varchar(255) not null, `created_at` timestamp null, `updated_at` timestamp null) default character set utf8mb4 collate 'utf8mb4_unicode_ci') at C:\\Users\\Xande\\OneDrive\\Documents\\GitHub\\pra-c2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:801)
 [stacktrace]
 #0 C:\\Users\\Xande\\OneDrive\\Documents\\GitHub\\pra-c2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(755): Illuminate\\Database\\Connection->runQueryCallback('create table `b...', Array, Object(Closure))
@@ -910,7 +910,7 @@ Stack trace:
 #32 C:\\Users\\Xande\\OneDrive\\Documents\\GitHub\\pra-c2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(201): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #33 C:\\Users\\Xande\\OneDrive\\Documents\\GitHub\\pra-c2\\artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #34 {main}
-"} 
+"}
 [2025-09-10 08:21:54] local.ERROR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'payload' in 'field list' (Connection: mysql, SQL: update `sessions` set `payload` = YTozOntzOjY6Il90b2tlbiI7czo0MDoiN0dZdWxIdGRvV3g3QXA2U0hWWnJrMXByZTVReHRxb3R2bXV3dldGRyI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MzA6Imh0dHA6Ly9sb2NhbGhvc3QvcHJhLWMyL3B1YmxpYyI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=, `last_activity` = 1757492514, `user_id` = ?, `ip_address` = ::1, `user_agent` = Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36, `id` = PEIcBIgz6d3meLmjMUG68fjNJFL5wJvp5oScLodK where `id` = PEIcBIgz6d3meLmjMUG68fjNJFL5wJvp5oScLodK) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42S22): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'payload' in 'field list' (Connection: mysql, SQL: update `sessions` set `payload` = YTozOntzOjY6Il90b2tlbiI7czo0MDoiN0dZdWxIdGRvV3g3QXA2U0hWWnJrMXByZTVReHRxb3R2bXV3dldGRyI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MzA6Imh0dHA6Ly9sb2NhbGhvc3QvcHJhLWMyL3B1YmxpYyI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=, `last_activity` = 1757492514, `user_id` = ?, `ip_address` = ::1, `user_agent` = Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36, `id` = PEIcBIgz6d3meLmjMUG68fjNJFL5wJvp5oScLodK where `id` = PEIcBIgz6d3meLmjMUG68fjNJFL5wJvp5oScLodK) at C:\\Users\\Xande\\OneDrive\\Documents\\GitHub\\pra-c2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:801)
 [stacktrace]
 #0 C:\\Users\\Xande\\OneDrive\\Documents\\GitHub\\pra-c2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(755): Illuminate\\Database\\Connection->runQueryCallback('update `session...', Array, Object(Closure))
@@ -1002,7 +1002,7 @@ Stack trace:
 #41 C:\\Users\\Xande\\OneDrive\\Documents\\GitHub\\pra-c2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
 #42 C:\\Users\\Xande\\OneDrive\\Documents\\GitHub\\pra-c2\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #43 {main}
-"} 
+"}
 [2025-09-10 08:21:59] local.ERROR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'payload' in 'field list' (Connection: mysql, SQL: update `sessions` set `payload` = YTozOntzOjY6Il90b2tlbiI7czo0MDoic3l1NEE2VXdrUXJGYkw4M3RsU2NJckZHeHJ0dVlFdE9OTEwyclNWWCI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MzA6Imh0dHA6Ly9sb2NhbGhvc3QvcHJhLWMyL3B1YmxpYyI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=, `last_activity` = 1757492519, `user_id` = ?, `ip_address` = ::1, `user_agent` = Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36, `id` = 3jbypvQizO0pRLt39WxRPuN1t4Yp5bZAYPpouR4C where `id` = 3jbypvQizO0pRLt39WxRPuN1t4Yp5bZAYPpouR4C) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42S22): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'payload' in 'field list' (Connection: mysql, SQL: update `sessions` set `payload` = YTozOntzOjY6Il90b2tlbiI7czo0MDoic3l1NEE2VXdrUXJGYkw4M3RsU2NJckZHeHJ0dVlFdE9OTEwyclNWWCI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MzA6Imh0dHA6Ly9sb2NhbGhvc3QvcHJhLWMyL3B1YmxpYyI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=, `last_activity` = 1757492519, `user_id` = ?, `ip_address` = ::1, `user_agent` = Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36, `id` = 3jbypvQizO0pRLt39WxRPuN1t4Yp5bZAYPpouR4C where `id` = 3jbypvQizO0pRLt39WxRPuN1t4Yp5bZAYPpouR4C) at C:\\Users\\Xande\\OneDrive\\Documents\\GitHub\\pra-c2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:801)
 [stacktrace]
 #0 C:\\Users\\Xande\\OneDrive\\Documents\\GitHub\\pra-c2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(755): Illuminate\\Database\\Connection->runQueryCallback('update `session...', Array, Object(Closure))
@@ -1094,7 +1094,7 @@ Stack trace:
 #41 C:\\Users\\Xande\\OneDrive\\Documents\\GitHub\\pra-c2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
 #42 C:\\Users\\Xande\\OneDrive\\Documents\\GitHub\\pra-c2\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #43 {main}
-"} 
+"}
 [2025-09-12 12:15:41] local.ERROR: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'brands' already exists (Connection: mysql, SQL: create table `brands` (`id` bigint unsigned not null auto_increment primary key, `name` varchar(255) not null, `created_at` timestamp null, `updated_at` timestamp null) default character set utf8mb4 collate 'utf8mb4_unicode_ci') {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42S01): SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'brands' already exists (Connection: mysql, SQL: create table `brands` (`id` bigint unsigned not null auto_increment primary key, `name` varchar(255) not null, `created_at` timestamp null, `updated_at` timestamp null) default character set utf8mb4 collate 'utf8mb4_unicode_ci') at C:\\laragon\\www\\laravel101\\pra-c2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:801)
 [stacktrace]
 #0 C:\\laragon\\www\\laravel101\\pra-c2\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(755): Illuminate\\Database\\Connection->runQueryCallback('create table `b...', Array, Object(Closure))
@@ -1168,4 +1168,89 @@ Stack trace:
 #32 C:\\laragon\\www\\laravel101\\pra-c2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(201): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #33 C:\\laragon\\www\\laravel101\\pra-c2\\artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #34 {main}
+"}
+[2025-10-08 07:51:22] local.ERROR: No arguments expected for "migrate" command, got "::". {"exception":"[object] (Symfony\\Component\\Console\\Exception\\RuntimeException(code: 0): No arguments expected for \"migrate\" command, got \"::\". at C:\\Users\\teren\\OneDrive\\Documenten\\GitHub\\pra-c2\\vendor\\symfony\\console\\Input\\ArgvInput.php:196)
+[stacktrace]
+#0 C:\\Users\\teren\\OneDrive\\Documenten\\GitHub\\pra-c2\\vendor\\symfony\\console\\Input\\ArgvInput.php(89): Symfony\\Component\\Console\\Input\\ArgvInput->parseArgument('::')
+#1 C:\\Users\\teren\\OneDrive\\Documenten\\GitHub\\pra-c2\\vendor\\symfony\\console\\Input\\ArgvInput.php(74): Symfony\\Component\\Console\\Input\\ArgvInput->parseToken('::', true)
+#2 C:\\Users\\teren\\OneDrive\\Documenten\\GitHub\\pra-c2\\vendor\\symfony\\console\\Input\\Input.php(55): Symfony\\Component\\Console\\Input\\ArgvInput->parse()
+#3 C:\\Users\\teren\\OneDrive\\Documenten\\GitHub\\pra-c2\\vendor\\symfony\\console\\Command\\Command.php(285): Symfony\\Component\\Console\\Input\\Input->bind(Object(Symfony\\Component\\Console\\Input\\InputDefinition))
+#4 C:\\Users\\teren\\OneDrive\\Documenten\\GitHub\\pra-c2\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(180): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#5 C:\\Users\\teren\\OneDrive\\Documenten\\GitHub\\pra-c2\\vendor\\symfony\\console\\Application.php(1081): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#6 C:\\Users\\teren\\OneDrive\\Documenten\\GitHub\\pra-c2\\vendor\\symfony\\console\\Application.php(320): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#7 C:\\Users\\teren\\OneDrive\\Documenten\\GitHub\\pra-c2\\vendor\\symfony\\console\\Application.php(174): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#8 C:\\Users\\teren\\OneDrive\\Documenten\\GitHub\\pra-c2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(201): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#9 C:\\Users\\teren\\OneDrive\\Documenten\\GitHub\\pra-c2\\artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#10 {main}
+"} 
+[2025-10-08 07:51:31] local.ERROR: There are no commands defined in the "migrate:" namespace.
+
+Did you mean this?
+    migrate {"exception":"[object] (Symfony\\Component\\Console\\Exception\\NamespaceNotFoundException(code: 0): There are no commands defined in the \"migrate:\" namespace.
+
+Did you mean this?
+    migrate at C:\\Users\\teren\\OneDrive\\Documenten\\GitHub\\pra-c2\\vendor\\symfony\\console\\Application.php:657)
+[stacktrace]
+#0 C:\\Users\\teren\\OneDrive\\Documenten\\GitHub\\pra-c2\\vendor\\symfony\\console\\Application.php(708): Symfony\\Component\\Console\\Application->findNamespace('migrate:')
+#1 C:\\Users\\teren\\OneDrive\\Documenten\\GitHub\\pra-c2\\vendor\\symfony\\console\\Application.php(262): Symfony\\Component\\Console\\Application->find('migrate::fresh')
+#2 C:\\Users\\teren\\OneDrive\\Documenten\\GitHub\\pra-c2\\vendor\\symfony\\console\\Application.php(174): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 C:\\Users\\teren\\OneDrive\\Documenten\\GitHub\\pra-c2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(201): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 C:\\Users\\teren\\OneDrive\\Documenten\\GitHub\\pra-c2\\artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 {main}
+"} 
+[2025-10-08 07:51:54] local.ERROR: No arguments expected for "migrate" command, got "::fresh". {"exception":"[object] (Symfony\\Component\\Console\\Exception\\RuntimeException(code: 0): No arguments expected for \"migrate\" command, got \"::fresh\". at C:\\Users\\teren\\OneDrive\\Documenten\\GitHub\\pra-c2\\vendor\\symfony\\console\\Input\\ArgvInput.php:196)
+[stacktrace]
+#0 C:\\Users\\teren\\OneDrive\\Documenten\\GitHub\\pra-c2\\vendor\\symfony\\console\\Input\\ArgvInput.php(89): Symfony\\Component\\Console\\Input\\ArgvInput->parseArgument('::fresh')
+#1 C:\\Users\\teren\\OneDrive\\Documenten\\GitHub\\pra-c2\\vendor\\symfony\\console\\Input\\ArgvInput.php(74): Symfony\\Component\\Console\\Input\\ArgvInput->parseToken('::fresh', true)
+#2 C:\\Users\\teren\\OneDrive\\Documenten\\GitHub\\pra-c2\\vendor\\symfony\\console\\Input\\Input.php(55): Symfony\\Component\\Console\\Input\\ArgvInput->parse()
+#3 C:\\Users\\teren\\OneDrive\\Documenten\\GitHub\\pra-c2\\vendor\\symfony\\console\\Command\\Command.php(285): Symfony\\Component\\Console\\Input\\Input->bind(Object(Symfony\\Component\\Console\\Input\\InputDefinition))
+#4 C:\\Users\\teren\\OneDrive\\Documenten\\GitHub\\pra-c2\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(180): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#5 C:\\Users\\teren\\OneDrive\\Documenten\\GitHub\\pra-c2\\vendor\\symfony\\console\\Application.php(1081): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#6 C:\\Users\\teren\\OneDrive\\Documenten\\GitHub\\pra-c2\\vendor\\symfony\\console\\Application.php(320): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#7 C:\\Users\\teren\\OneDrive\\Documenten\\GitHub\\pra-c2\\vendor\\symfony\\console\\Application.php(174): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#8 C:\\Users\\teren\\OneDrive\\Documenten\\GitHub\\pra-c2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(201): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#9 C:\\Users\\teren\\OneDrive\\Documenten\\GitHub\\pra-c2\\artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#10 {main}
+"} 
+[2025-10-08 07:52:01] local.ERROR: No arguments expected for "migrate" command, got "fresh". {"exception":"[object] (Symfony\\Component\\Console\\Exception\\RuntimeException(code: 0): No arguments expected for \"migrate\" command, got \"fresh\". at C:\\Users\\teren\\OneDrive\\Documenten\\GitHub\\pra-c2\\vendor\\symfony\\console\\Input\\ArgvInput.php:196)
+[stacktrace]
+#0 C:\\Users\\teren\\OneDrive\\Documenten\\GitHub\\pra-c2\\vendor\\symfony\\console\\Input\\ArgvInput.php(89): Symfony\\Component\\Console\\Input\\ArgvInput->parseArgument('fresh')
+#1 C:\\Users\\teren\\OneDrive\\Documenten\\GitHub\\pra-c2\\vendor\\symfony\\console\\Input\\ArgvInput.php(74): Symfony\\Component\\Console\\Input\\ArgvInput->parseToken('fresh', true)
+#2 C:\\Users\\teren\\OneDrive\\Documenten\\GitHub\\pra-c2\\vendor\\symfony\\console\\Input\\Input.php(55): Symfony\\Component\\Console\\Input\\ArgvInput->parse()
+#3 C:\\Users\\teren\\OneDrive\\Documenten\\GitHub\\pra-c2\\vendor\\symfony\\console\\Command\\Command.php(285): Symfony\\Component\\Console\\Input\\Input->bind(Object(Symfony\\Component\\Console\\Input\\InputDefinition))
+#4 C:\\Users\\teren\\OneDrive\\Documenten\\GitHub\\pra-c2\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(180): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#5 C:\\Users\\teren\\OneDrive\\Documenten\\GitHub\\pra-c2\\vendor\\symfony\\console\\Application.php(1081): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#6 C:\\Users\\teren\\OneDrive\\Documenten\\GitHub\\pra-c2\\vendor\\symfony\\console\\Application.php(320): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#7 C:\\Users\\teren\\OneDrive\\Documenten\\GitHub\\pra-c2\\vendor\\symfony\\console\\Application.php(174): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#8 C:\\Users\\teren\\OneDrive\\Documenten\\GitHub\\pra-c2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(201): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#9 C:\\Users\\teren\\OneDrive\\Documenten\\GitHub\\pra-c2\\artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#10 {main}
+"} 
+[2025-10-08 07:52:06] local.ERROR: No arguments expected for "migrate" command, got ":". {"exception":"[object] (Symfony\\Component\\Console\\Exception\\RuntimeException(code: 0): No arguments expected for \"migrate\" command, got \":\". at C:\\Users\\teren\\OneDrive\\Documenten\\GitHub\\pra-c2\\vendor\\symfony\\console\\Input\\ArgvInput.php:196)
+[stacktrace]
+#0 C:\\Users\\teren\\OneDrive\\Documenten\\GitHub\\pra-c2\\vendor\\symfony\\console\\Input\\ArgvInput.php(89): Symfony\\Component\\Console\\Input\\ArgvInput->parseArgument(':')
+#1 C:\\Users\\teren\\OneDrive\\Documenten\\GitHub\\pra-c2\\vendor\\symfony\\console\\Input\\ArgvInput.php(74): Symfony\\Component\\Console\\Input\\ArgvInput->parseToken(':', true)
+#2 C:\\Users\\teren\\OneDrive\\Documenten\\GitHub\\pra-c2\\vendor\\symfony\\console\\Input\\Input.php(55): Symfony\\Component\\Console\\Input\\ArgvInput->parse()
+#3 C:\\Users\\teren\\OneDrive\\Documenten\\GitHub\\pra-c2\\vendor\\symfony\\console\\Command\\Command.php(285): Symfony\\Component\\Console\\Input\\Input->bind(Object(Symfony\\Component\\Console\\Input\\InputDefinition))
+#4 C:\\Users\\teren\\OneDrive\\Documenten\\GitHub\\pra-c2\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(180): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#5 C:\\Users\\teren\\OneDrive\\Documenten\\GitHub\\pra-c2\\vendor\\symfony\\console\\Application.php(1081): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#6 C:\\Users\\teren\\OneDrive\\Documenten\\GitHub\\pra-c2\\vendor\\symfony\\console\\Application.php(320): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#7 C:\\Users\\teren\\OneDrive\\Documenten\\GitHub\\pra-c2\\vendor\\symfony\\console\\Application.php(174): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#8 C:\\Users\\teren\\OneDrive\\Documenten\\GitHub\\pra-c2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(201): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#9 C:\\Users\\teren\\OneDrive\\Documenten\\GitHub\\pra-c2\\artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#10 {main}
+"} 
+[2025-10-08 07:52:10] local.ERROR: No arguments expected for "migrate" command, got ":fresh". {"exception":"[object] (Symfony\\Component\\Console\\Exception\\RuntimeException(code: 0): No arguments expected for \"migrate\" command, got \":fresh\". at C:\\Users\\teren\\OneDrive\\Documenten\\GitHub\\pra-c2\\vendor\\symfony\\console\\Input\\ArgvInput.php:196)
+[stacktrace]
+#0 C:\\Users\\teren\\OneDrive\\Documenten\\GitHub\\pra-c2\\vendor\\symfony\\console\\Input\\ArgvInput.php(89): Symfony\\Component\\Console\\Input\\ArgvInput->parseArgument(':fresh')
+#1 C:\\Users\\teren\\OneDrive\\Documenten\\GitHub\\pra-c2\\vendor\\symfony\\console\\Input\\ArgvInput.php(74): Symfony\\Component\\Console\\Input\\ArgvInput->parseToken(':fresh', true)
+#2 C:\\Users\\teren\\OneDrive\\Documenten\\GitHub\\pra-c2\\vendor\\symfony\\console\\Input\\Input.php(55): Symfony\\Component\\Console\\Input\\ArgvInput->parse()
+#3 C:\\Users\\teren\\OneDrive\\Documenten\\GitHub\\pra-c2\\vendor\\symfony\\console\\Command\\Command.php(285): Symfony\\Component\\Console\\Input\\Input->bind(Object(Symfony\\Component\\Console\\Input\\InputDefinition))
+#4 C:\\Users\\teren\\OneDrive\\Documenten\\GitHub\\pra-c2\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(180): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#5 C:\\Users\\teren\\OneDrive\\Documenten\\GitHub\\pra-c2\\vendor\\symfony\\console\\Application.php(1081): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#6 C:\\Users\\teren\\OneDrive\\Documenten\\GitHub\\pra-c2\\vendor\\symfony\\console\\Application.php(320): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#7 C:\\Users\\teren\\OneDrive\\Documenten\\GitHub\\pra-c2\\vendor\\symfony\\console\\Application.php(174): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#8 C:\\Users\\teren\\OneDrive\\Documenten\\GitHub\\pra-c2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(201): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#9 C:\\Users\\teren\\OneDrive\\Documenten\\GitHub\\pra-c2\\artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#10 {main}
 "} 
