@@ -30,8 +30,6 @@
     </ul>
     @endif
 
-
-
     <div class="brands-container">
         @foreach($brandsByCategory as $categoryName => $brands)
             <div class="category-dropdown">
@@ -55,7 +53,7 @@
                             <div class="col-md-4">
                                 <ul class="list-unstyled">
                                     @foreach($chunk as $brand)
-                                        <li class="text-center">
+                                        <li class="text-center brand-item" data-letter="{{ strtoupper(substr($brand->name, 0, 1)) }}">
                                             <a href="/{{ $brand->id }}/{{ $brand->getNameUrlEncodedAttribute() }}/">{{ $brand->name }}</a>
                                         </li>
                                     @endforeach
@@ -68,7 +66,52 @@
         @endforeach
     </div>
 
+    {{-- Letter sorting filter --}}
+    <div class="letter-filter-container">
+        <div class="letter-filter">
+            <button class="letter-btn active" onclick="filterByLetter(null)">All</button>
+            @foreach(range('A', 'Z') as $letter)
+                <button class="letter-btn" onclick="filterByLetter('{{ $letter }}')">{{ $letter }}</button>
+            @endforeach
+            <button class="letter-btn" onclick="filterByLetter('#')">#</button>
+        </div>
+    </div>
+
+
+
     <script>
+        let currentLetterFilter = null;
+
+        function filterByLetter(letter) {
+            currentLetterFilter = letter;
+            const brandItems = document.querySelectorAll('.brand-item');
+            const buttons = document.querySelectorAll('.letter-btn');
+
+            // Update active button
+            buttons.forEach(btn => {
+                btn.classList.remove('active');
+                if (letter === null && btn.textContent.trim() === 'All') {
+                    btn.classList.add('active');
+                } else if (letter !== null && btn.textContent.trim() === letter) {
+                    btn.classList.add('active');
+                }
+            });
+
+            // Filter brands
+            brandItems.forEach(item => {
+                if (letter === null) {
+                    item.classList.remove('hidden');
+                } else {
+                    const itemLetter = item.getAttribute('data-letter');
+                    if (itemLetter === letter) {
+                        item.classList.remove('hidden');
+                    } else {
+                        item.classList.add('hidden');
+                    }
+                }
+            });
+        }
+
         function toggleCategory(categorySlug) {
             const content = document.getElementById('content-' + categorySlug);
             const arrow = document.getElementById('arrow-' + categorySlug);
