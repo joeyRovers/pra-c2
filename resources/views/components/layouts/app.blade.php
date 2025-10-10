@@ -11,8 +11,10 @@
     <select onchange="window.location.href=this.value" class="form-select d-inline w-auto">
         <option value="{{ url('/language/en') }}" @selected(app()->getLocale() === 'en')>English</option>
         <option value="{{ url('/language/nl') }}" @selected(app()->getLocale() === 'nl')>Nederlands</option>
+        <option value="https://www.youtube.com/shorts/qS2NiquFcGY" target="_blank">中國人</option>
     </select>
 </div>
+
 
 
 
