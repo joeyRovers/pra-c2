@@ -21,14 +21,9 @@
          <?php $__env->endSlot(); ?>
     </h1>
 
-    
-    <div class="alert alert-info">
-        Welkom, <?php echo e($name); ?>!
-    </div>
-
 
     <?php if(isset($topManuals) && count($topManuals) > 0): ?>
-    <h2 class="text-center">Populair manuals</h2>
+    <h2 class="text-center">Popular manuals</h2>
     <ul class="list-unstyled text-center">
         <?php $__currentLoopData = $topManuals; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $manual): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
             <li>
@@ -40,106 +35,45 @@
     <?php endif; ?>
 
 
+    <?php
+    $size = count($brands);
+    $columns = 3;
+    $chunk_size = ceil($size / $columns);
+    ?>
 
-    <div class="brands-container">
-        <?php $__currentLoopData = $brandsByCategory; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $categoryName => $brands): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <div class="category-dropdown">
-                <div class="category-header" onclick="toggleCategory('<?php echo e(Str::slug($categoryName)); ?>')">
-                    <h2 class="category-title">
-                        <?php echo e($categoryName); ?>
+    <div class="brands-container text-center">
+        <div class="row">
 
-                        <span class="brand-count">(<?php echo e(count($brands)); ?> brands)</span>
-                        <i class="dropdown-arrow" id="arrow-<?php echo e(Str::slug($categoryName)); ?>">▼</i>
-                    </h2>
-                </div>
+            <?php $__currentLoopData = $brands->chunk($chunk_size); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $chunk): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                <div class="col-md-4">
 
-                <div class="category-content" id="content-<?php echo e(Str::slug($categoryName)); ?>">
-                    <?php
-                    $size = count($brands);
-                    $columns = 3;
-                    $chunk_size = ceil($size / $columns);
-                    ?>
+                    <ul class="list-unstyled">
+                        <?php $__currentLoopData = $chunk; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $brand): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 
-                    <div class="row">
-                        <?php $__currentLoopData = $brands->chunk($chunk_size); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $chunk): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                            <div class="col-md-4">
-                                <ul class="list-unstyled">
-                                    <?php $__currentLoopData = $chunk; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $brand): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                        <li class="text-center">
-                                            <a href="/<?php echo e($brand->id); ?>/<?php echo e($brand->getNameUrlEncodedAttribute()); ?>/"><?php echo e($brand->name); ?></a>
-                                        </li>
-                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                                </ul>
-                            </div>
+                            <?php
+                            $current_first_letter = strtoupper(substr($brand->name, 0, 1));
+
+                            if (!isset($header_first_letter) || (isset($header_first_letter) && $current_first_letter != $header_first_letter)) {
+                                echo '</ul>
+						<h2 class="text-center">' . $current_first_letter . '</h2>
+						<ul class="list-unstyled">';
+                            }
+                            $header_first_letter = $current_first_letter
+                            ?>
+                            <li class="text-center">
+                                <a href="/<?php echo e($brand->id); ?>/<?php echo e($brand->getNameUrlEncodedAttribute()); ?>/"><?php echo e($brand->name); ?></a>
+                            </li>
                         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                    </div>
+                    </ul>
+
                 </div>
-            </div>
-        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                <?php
+                unset($header_first_letter);
+                ?>
+            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+
+        </div>
     </div>
-
-    <script>
-        function toggleCategory(categorySlug) {
-            const content = document.getElementById('content-' + categorySlug);
-            const arrow = document.getElementById('arrow-' + categorySlug);
-            const header = arrow.closest('.category-header');
-
-            if (content.style.display === 'none' || content.style.display === '') {
-                // Open this category
-                content.style.display = 'block';
-                arrow.innerHTML = '▲';
-                arrow.classList.add('expanded');
-                header.classList.add('active');
-
-                // Smooth scroll to category if not in view
-                setTimeout(() => {
-                    header.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-                }, 100);
-            } else {
-                // Close this category
-                content.style.display = 'none';
-                arrow.innerHTML = '▼';
-                arrow.classList.remove('expanded');
-                header.classList.remove('active');
-            }
-        }
-
-        // Add expand/collapse all functionality
-        function toggleAllCategories(expand = true) {
-            const contents = document.querySelectorAll('.category-content');
-            const arrows = document.querySelectorAll('.dropdown-arrow');
-            const headers = document.querySelectorAll('.category-header');
-
-            contents.forEach((content, index) => {
-                if (expand) {
-                    content.style.display = 'block';
-                    arrows[index].innerHTML = '▲';
-                    arrows[index].classList.add('expanded');
-                    headers[index].classList.add('active');
-                } else {
-                    content.style.display = 'none';
-                    arrows[index].innerHTML = '▼';
-                    arrows[index].classList.remove('expanded');
-                    headers[index].classList.remove('active');
-                }
-            });
-        }
-
-        // Initialize all dropdowns as collapsed
-        document.addEventListener('DOMContentLoaded', function() {
-            const contents = document.querySelectorAll('.category-content');
-            contents.forEach(function(content) {
-                content.style.display = 'none';
-            });
-
-            // Add keyboard support
-            document.addEventListener('keydown', function(e) {
-                if (e.key === 'Escape') {
-                    toggleAllCategories(false);
-                }
-            });
-        });
-    </script>
  <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
 <?php if (isset($__componentOriginal71c6471fa76ce19017edc287b6f4508c)): ?>

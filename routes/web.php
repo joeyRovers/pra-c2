@@ -36,21 +36,12 @@ use App\Http\Controllers\LocaleController;
 
 Route::get('/', function () {
     $name = "terence, xander of joey";
-
-    // Group brands by category
-    $brandsByCategory = Brand::with('category')
-        ->get()
-        ->sortBy('name')
-        ->groupBy(function($brand) {
-            return $brand->category ? $brand->category->name : 'Uncategorized';
-        })
-        ->sortKeys();
-
+    $brands = Brand::all()->sortBy('name');
     $topManuals = \App\Models\Manual::orderByDesc('views')->limit(10)->get();
 
     return view('pages.homepage', [
-        'name' => $name,
-        'brandsByCategory' => $brandsByCategory,
+        'name' => $name,           // Add this line
+        'brands' => $brands,
         'topManuals' => $topManuals,
     ]);
 })->name('home');

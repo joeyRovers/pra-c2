@@ -96,116 +96,6 @@
   }
 }
 
-/* Category dropdown styles for homepage */
-.category-dropdown {
-    margin-bottom: 1.5rem;
-    border: 1px solid #e9ecef;
-    border-radius: 0.5rem;
-    overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.category-header {
-    background: linear-gradient(135deg, #343a40 , #525b64);
-    padding: 1rem 1.5rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    user-select: none;
-}
-
-.category-header:hover {
-    background: linear-gradient(135deg, #343a40 , #525b64);
-    transform: translateY(-1px);
-}
-
-.category-header:active {
-    transform: translateY(0);
-}
-
-.category-header.active {
-    background: linear-gradient(135deg, #343a40, #515a63);
-}
-
-/* Category control buttons */
-.category-controls {
-    margin-bottom: 2rem;
-}
-
-.category-controls .btn {
-    margin: 0.25rem;
-    padding: 0.5rem 1rem;
-    border-radius: 0.375rem;
-    font-weight: 500;
-    transition: all 0.2s ease;
-}
-
-.category-controls .btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-}
-
-.category-title {
-    color: white;
-    margin: 0;
-    font-weight: 600;
-    font-size: 1.25rem;
-    letter-spacing: 0.02em;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-transform: uppercase;
-}
-
-.brand-count {
-    font-size: 0.9rem;
-    opacity: 0.8;
-    font-weight: normal;
-    text-transform: none;
-}
-
-.dropdown-arrow {
-    font-size: 0.8rem;
-    transition: transform 0.3s ease;
-    margin-left: 1rem;
-}
-
-.dropdown-arrow.expanded {
-    transform: rotate(180deg);
-}
-
-.category-content {
-    padding: 1.5rem;
-    background: #f8f9fa;
-    border-top: 1px solid #dee2e6;
-    animation: slideDown 0.3s ease-out;
-}
-
-@keyframes slideDown {
-    from {
-        opacity: 0;
-        max-height: 0;
-    }
-    to {
-        opacity: 1;
-        max-height: 1000px;
-    }
-}
-
-.category-content .list-unstyled li {
-    margin-bottom: 0.5rem;
-}
-
-.category-content .list-unstyled a {
-    color: #495057;
-
-}
-
-.category-content .list-unstyled a:hover {
-    color: #007bff;
-    transform: translateY(-2px);
-
-}
-
 :root {
     --blue: #3490dc;
     --indigo: #6574cd;
@@ -1297,7 +1187,7 @@ pre code {
     .col-md-4 {
         flex: 0 0 33.3333333333%;
         max-width: 33.3333333333%;
-        background-color: #f8f9fa;
+        background-color: #e9ecef;
     }
 
     .col-md-5 {
